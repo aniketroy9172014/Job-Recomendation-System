@@ -1,0 +1,131 @@
+
+body {
+    background: linear-gradient(120deg, #f8fafc 0%, #e0e7ff 100%);
+    min-height: 100vh;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
+.container {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 6px 32px 0 rgba(60,72,100,0.12);
+    padding: 2.5rem 2.5rem 2rem 2.5rem;
+    margin-top: 3.5rem;
+    max-width: 540px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+h2, h5, h6 {
+    color: #3730a3;
+    font-weight: 700;
+    word-break: break-word;
+}
+
+.form-label {
+    color: #6366f1;
+    font-weight: 500;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #6366f1 0%, #3730a3 100%);
+    border: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: background 0.2s;
+}
+.btn-primary:hover {
+    background: linear-gradient(90deg, #3730a3 0%, #6366f1 100%);
+}
+
+.btn-secondary {
+    background: #e0e7ff;
+    color: #3730a3;
+    border: none;
+    font-weight: 500;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+    background: #6366f1;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5em 1.2em;
+    font-weight: 500;
+    cursor: pointer;
+}
+input[type="file"]::-webkit-file-upload-button:hover {
+    background: #3730a3;
+}
+
+.list-group-item {
+    border: none;
+    border-radius: 12px;
+    margin-bottom: 1.2rem;
+    box-shadow: 0 2px 12px 0 rgba(60,72,100,0.08);
+    padding: 1.5rem 1.2rem;
+    background: #f1f5f9;
+    word-break: break-word;
+}
+.list-group-item h5 {
+    color: #3730a3;
+    margin-bottom: 0.5rem;
+}
+.list-group-item p {
+    margin-bottom: 0.3rem;
+    color: #334155;
+}
+.list-group-item .btn-outline-primary {
+    border-color: #6366f1;
+    color: #6366f1;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s;
+}
+.list-group-item .btn-outline-primary:hover {
+    background: #6366f1;
+    color: #fff;
+}
+
+hr {
+    border-top: 2px solid #e0e7ff;
+    margin: 2rem 0 1.5rem 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+    .container {
+        max-width: 90vw;
+        padding: 2rem 1rem 1.5rem 1rem;
+    }
+    h2 {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 1.2rem 0.5rem 1rem 0.5rem;
+        max-width: 99vw;
+        margin-top: 1.2rem;
+    }
+    h2 {
+        font-size: 1.2rem;
+    }
+    .list-group-item {
+        padding: 1rem 0.5rem;
+        font-size: 0.97rem;
+    }
+    .btn, .btn-primary, .btn-secondary {
+        font-size: 0.97rem;
+        padding: 0.5em 1em;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        padding: 0.5rem 0.1rem 0.5rem 0.1rem;
+    }
+    h2 {
+        font-size: 1rem;
+    }
+}

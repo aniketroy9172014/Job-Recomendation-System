@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recommended Jobs</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container mt-5">
+    <h2 class="mb-4">Recommended Jobs for {{ name }}</h2>
+    <h5>Desired Role: {{ job_role }}</h5>
+    <h6>Extracted Skills: {{ skills|join(', ') }}</h6>
+    <h6>Qualification: {{ qualification|join(', ') }}</h6>
+    <h6>Experience: {{ experience }}</h6>
+    <hr>
+    {% if jobs %}
+        <ul class="list-group">
+        {% for job in jobs %}
+            <li class="list-group-item">
+                <h5>{{ job['title'] }}</h5>
+                <p><strong>Company:</strong> {{ job['company'] }}</p>
+                <p><strong>Location:</strong> {{ job['location'] }}</p>
+                <p><strong>Description:</strong> {{ job['description'] }}</p>
+                <a href="{{ job['link'] }}" target="_blank" class="btn btn-sm btn-outline-primary">View Job</a>
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No jobs found for your profile and desired role.</p>
+    {% endif %}
+    <a href="/" class="btn btn-secondary mt-4">Back</a>
+</div>
+</body>
+</html>
