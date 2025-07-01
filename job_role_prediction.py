@@ -6,11 +6,11 @@ import pandas as pd
 import re
 
 # Load saved models and encoders
-model = joblib.load('model.pkl')
-mlb = joblib.load('mlb_skills.pkl')
-degree_encoder = joblib.load('degree_encoder.pkl')
-domain_encoder = joblib.load('domain_encoder.pkl')
-job_encoder = joblib.load('job_encoder.pkl')
+model = joblib.load('models\model.pkl')
+mlb = joblib.load('models\mlb_skills.pkl')
+degree_encoder = joblib.load('models\degree_encoder.pkl')
+domain_encoder = joblib.load('models\domain_encoder.pkl')
+job_encoder = joblib.load('models\job_encoder.pkl')
 
 # ---- Preprocess Skills ----
 def preprocess_skills(skills_input):
